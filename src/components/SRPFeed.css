@@ -1,0 +1,231 @@
+/* ═══════════════════════════════════════
+   SRP Feed — Pixel-matched to production
+   ═══════════════════════════════════════ */
+
+.srp {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+  color: #111116;
+}
+
+/* ── Search ── */
+.srp-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px 0;
+  flex-shrink: 0;
+}
+.srp-search__bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #C6C6C6;
+  border-radius: 9999px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #8F8F8F;
+}
+.srp-search__bar svg { flex-shrink: 0; color: #8F8F8F; }
+.srp-search__text { white-space: nowrap; }
+.srp-search__filter {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  border: 1.5px solid #C6C6C6;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; cursor: pointer; padding: 0;
+}
+.srp-search__filter svg { color: #111116; }
+.srp-pills {
+  display: flex; gap: 8px;
+  padding: 8px 16px 8px;
+  flex-shrink: 0;
+}
+.srp-pill {
+  flex: 1; text-align: center;
+  font-size: 14px; font-weight: 600;
+  padding: 10px 0;
+  border-radius: 9999px;
+  border: 1.5px solid #C6C6C6;
+  background: #fff; color: #111116;
+  font-family: inherit;
+}
+
+/* ── Feed scroll area ── */
+.srp-feed {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.srp-feed::-webkit-scrollbar { display: none; }
+
+/* ── Card wrapper — contained with drop shadow ── */
+.card-wrap {
+  margin: 12px 16px 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.card-wrap:first-child { margin-top: 8px; }
+
+.card-wrap--premium {
+  box-shadow: 0px 8px 20px 0px rgba(0, 65, 217, 0.18);
+}
+
+/* ── Photo placeholder ── */
+.photo-ph {
+  width: 100%;
+}
+.aspect-16-9 { aspect-ratio: 16 / 9; }
+.aspect-tall { aspect-ratio: 3 / 2.8; }
+
+/* Real photo */
+.photo-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Pagination pill (carousel controls) ── */
+.pagination {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.pagination__pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.pagination__dot {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Price — large and bold, matching production ── */
+.price-val {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111116;
+  letter-spacing: -0.3px;
+}
+.price-suf {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111116;
+}
+
+/* ── Card extra (amenity + CTA) ── */
+.card-extra {
+  padding: 0 16px 16px;
+}
+
+/* ── Amenity ── */
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13.5px;
+  margin-top: 8px;
+}
+.amenity__icon {
+  color: #535364;
+  font-size: 15px;
+  line-height: 1;
+}
+.amenity__name {
+  font-weight: 700;
+  color: #111116;
+}
+.amenity__rare {
+  font-weight: 400;
+  color: #6E6E6E;
+}
+
+/* ── CTA row (phone + button) ── */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ── Text CTA (proposed) ── */
+.text-cta {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  color: #0041D9;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* ── Annotation ── */
+.srp-note {
+  text-align: center;
+  font-size: 12px;
+  color: #ADADAD;
+  padding: 20px 16px 40px;
+}
+
+/* ── Map — 24px above global nav ── */
+.srp-map-anchor {
+  position: absolute;
+  bottom: calc(83px + 24px);
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  pointer-events: none;
+}
+.srp-map {
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 8px 18px;
+  background: #fff; border: none;
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  font-size: 14px; font-weight: 700;
+  color: #111116; cursor: pointer;
+  font-family: inherit;
+  pointer-events: auto;
+}
+
+/* ── Nav — 83px tall ── */
+.srp-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 0 0;
+  height: 83px;
+  background: #fff;
+  border-top: 1px solid #DBDBDB;
+  flex-shrink: 0;
+}
+.srp-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #7E7F8E;
+}
+.srp-nav__item svg { width: 28px; height: 28px; }
+.srp-nav__item--on { color: #0041D9; }
+.srp-nav__item--on svg { fill: #0041D9; }

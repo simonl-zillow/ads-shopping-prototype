@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════
+   Constellation Design Tokens (Consumer)
+   Source: constellation-design-system skill
+   consumer-brand-guidelines/color-system
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-blue-600: #0041D9;       /* Zillow Blue — primary action */
+  --color-blue-700: #002FA0;       /* hover */
+  --color-blue-800: #001962;       /* Waterfront */
+
+  /* ── Gray Scale ── */
+  --color-gray-50: #F7F7F7;
+  --color-gray-100: #EBEBEB;
+  --color-gray-200: #DBDBDB;
+  --color-gray-300: #C6C6C6;
+  --color-gray-400: #ADADAD;
+  --color-gray-500: #8F8F8F;
+  --color-gray-600: #6E6E6E;
+  --color-gray-700: #4F4F4F;
+  --color-gray-800: #2E2E2E;
+  --color-gray-950: #111116;       /* Granite */
+
+  /* ── Semantic: Text ── */
+  --color-text-default: var(--color-gray-950);
+  --color-text-subtle: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-action-hero: var(--color-blue-600);
+
+  /* ── Semantic: Icon ── */
+  --color-icon-neutral: var(--color-gray-950);
+  --color-icon-subtle: var(--color-gray-600);
+  --color-icon-action-hero: var(--color-blue-600);
+
+  /* ── Semantic: Background ── */
+  --color-bg-neutral: #FFFFFF;
+  --color-bg-softest: var(--color-gray-50);
+
+  /* ── Semantic: Border ── */
+  --color-border-default: var(--color-gray-200);
+  --color-border-muted: var(--color-gray-300);
+
+  /* ── Status ── */
+  --color-red-600: #D32F2F;
+  --color-green-700: #2E7D32;
+  --color-teal-600: #136F65;
+
+  /* ── Spacing Tokens (Consumer) ── */
+  --space-100: 4px;
+  --space-200: 8px;
+  --space-300: 12px;
+  --space-400: 16px;
+  --space-500: 20px;
+  --space-600: 24px;
+  --space-800: 32px;
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* ── Typography ── */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* heading-lg: 28/34 bold */
+  --text-heading-lg: 700 28px/34px var(--font-sans);
+  /* heading-md: 22/28 bold */
+  --text-heading-md: 700 22px/28px var(--font-sans);
+  /* body-lg-bold: 18/24 bold */
+  --text-body-lg-bold: 700 18px/24px var(--font-sans);
+  /* body-bold: 16/22 bold */
+  --text-body-bold: 700 16px/22px var(--font-sans);
+  /* body: 16/22 regular */
+  --text-body: 400 16px/22px var(--font-sans);
+  /* body-sm: 14/20 regular */
+  --text-body-sm: 400 14px/20px var(--font-sans);
+  /* body-sm-bold: 14/20 bold */
+  --text-body-sm-bold: 700 14px/20px var(--font-sans);
+  /* body-xs: 12/16 regular */
+  --text-body-xs: 400 12px/16px var(--font-sans);
+}

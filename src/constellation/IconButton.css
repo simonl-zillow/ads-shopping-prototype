@@ -1,0 +1,36 @@
+/* IconButton — Constellation shim */
+
+.cst-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.cst-icon-btn--circle { border-radius: 50%; }
+.cst-icon-btn--square { border-radius: 8px; }
+
+.cst-icon-btn--sm { width: 32px; height: 32px; }
+.cst-icon-btn--md { width: 44px; height: 44px; }
+.cst-icon-btn--lg { width: 52px; height: 52px; }
+
+.cst-icon-btn--neutral.cst-icon-btn--outlined {
+  background: #fff;
+  border: 1.5px solid #C6C6C6;
+}
+.cst-icon-btn--neutral.cst-icon-btn--outlined:hover {
+  background: #F7F7F7;
+}
+
+.cst-icon-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #4F4F4F;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
